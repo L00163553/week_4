@@ -14,7 +14,7 @@ from cryptography.fernet import Fernet
 
 def encrypt_password(password):
     """
-    Function to encrypt the passwordsudo apt-get install rtbth-dkms
+    Function to encrypt the password
     :param password: password to encrypt
     :return: encrypted password
     """
