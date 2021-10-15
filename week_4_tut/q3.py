@@ -7,6 +7,7 @@
 # Description   :
 #
 """
+import pprint
 
 course_list = {}
 
@@ -22,7 +23,7 @@ def add_course():
 def edit_course():
     # function to edit course name
 
-    c_code = input("Please enter the course code you want to edit: {}\n". format(course_list))
+    c_code = input("Please enter the course code you want to edit: {}\n".format(course_list))
     if c_code in course_list:
         old_name = course_list[c_code]
         new_name = input("Enter the course name\n")
@@ -30,6 +31,13 @@ def edit_course():
         print("Course name changed successfully\n {} -> {}".format(old_name, new_name))
     else:
         print("Please enter a valid code")
+
+
+def display_data():
+    # function to display course list
+
+    pp = pprint.PrettyPrinter(indent=4)
+    pp.pprint(course_list)
 
 
 if __name__ == '__main__':
@@ -41,5 +49,9 @@ if __name__ == '__main__':
             add_course()
         elif user_option == 2:
             edit_course()
+        elif user_option == 3:
+            display_data()
         elif user_option == 4:
             break
+        else:
+            print("Please enter a valid option")
