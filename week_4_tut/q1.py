@@ -14,7 +14,7 @@ from cryptography.fernet import Fernet
 
 def encrypt_password(password):
     """
-    Function to encrypt the password
+    Function to encrypt the passwordsudo apt-get install rtbth-dkms
     :param password: password to encrypt
     :return: encrypted password
     """
@@ -32,5 +32,5 @@ if __name__ == '__main__':
     start_time = timeit.default_timer()
     print("The start time is :", start_time)
     encrypted_pwd = encrypt_password(pwd.encode())
-    print("The time taken is {:.4f}".format(timeit.default_timer() - start_time))
+    print("Time taken to encrypt {:.4f}".format(timeit.default_timer() - start_time))
     print("Encrypted Password: {}".format(encrypted_pwd))
